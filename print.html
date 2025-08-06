@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        textarea {
+            width: 300px;
+            height: 160px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            outline-color: #005fa3;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        #output {
+            margin-top: 25px;
+            font-family: monospace;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.body.append(document.createElement("textarea"));
+        const button = document.createElement("button");
+        button.textContent = "Convert";
+        document.body.append(button);
+        const output = document.createElement("div");
+        output.id = "output";
+        document.body.append(output);
+
+        
+        document.querySelector("button").addEventListener("click", () => {
+            let text = document.querySelector("textarea").value;
+            let newlines = text.split("\n");
+        
+            output.innerHTML = ""; 
+            
+            for (let i = 0; i < newlines.length; i++) {
+                let newline = newlines[i].toLowerCase();
+                let words = newline.split("_");
+                if (words.length < 2) continue;
+
+                let camelCase = words[0] + words[1][0].toUpperCase() + words[1].slice(1);
+                let result = camelCase + "✅".repeat(i + 1);
+                output.innerHTML += `<p>${result}</p>`;
+            }
+            
+        });
+
+    </script>
+</body>
+
+</html>
