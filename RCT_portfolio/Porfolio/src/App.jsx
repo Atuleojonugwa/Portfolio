@@ -1,19 +1,16 @@
-import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import './index.css'
 import pic from './assets/pic.png'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <nav className='flex items-center justify-between m-5 py-5 px-10 border-2 border-transparent rounded-[24px]'
         style={{
           background:` linear-gradient(to right, 
-              rgba(255, 255, 255, 0.2) 10%, 
-              rgba(0, 0, 0, 0.1) 50%, 
+              rgba(255, 255, 255, 0.2) 10%,  
               rgba(255, 255, 255, 0.2) 90%) border-box,
           rgba(255, 255, 255, 0.05) padding-box`,
           backgroundOrigin: `border-box`,
@@ -34,21 +31,23 @@ function App() {
         </div>
       </nav>
 
-      <div className="container flex items-center mt-[60px] mx-[20px] mb-[20px] border-[3px] border-[#5150503d] rounded-[15px] ">
-        <div className="cont1 flex h-full py-[20px] px-[40px] flex-col w-[600px]" style={{
-          borderTopLeftRadius: `15px`,
-          borderBottomLeftRadius: `15px`,
-          background: 
-          `linear-gradient(to right, 
-              rgba(255, 255, 255, 0.2) 10%, 
-              rgba(0, 0, 0, 0.1) 50%, 
-              rgba(255, 255, 255, 0.2) 90%) border-box,
-          rgba(255, 255, 255, 0.05) padding-box`,
-          backgroundOrigin: `border-box`,
-          backgroundClip: `padding-box, border-box;`,
-          backdropFilter: `blur(8px)`,
-          webkitBackdropFilter: `blur(8px)`
-        }}>
+      <div className="flex items-center mt-[60px] mx-[20px] ml-[20px] mb-[20px] border-[3px] border-[#5150503d] rounded-[15px] ">
+        <div className="cont1 flex h-full py-[20px] px-[40px] flex-col w-[600px]" 
+        // style={{
+        //   borderTopLeftRadius: `15px`,
+        //   borderBottomLeftRadius: `15px`,
+        //   background: 
+        //   `linear-gradient(to right, 
+        //       rgba(255, 255, 255, 0.2) 10%, 
+        //       rgba(0, 0, 0, 0.1) 50%, 
+        //       rgba(255, 255, 255, 0.2) 90%) border-box,
+        //   rgba(255, 255, 255, 0.05) padding-box`,
+        //   backgroundOrigin: `border-box`,
+        //   backgroundClip: `padding-box, border-box;`,
+        //   backdropFilter: `blur(8px)`,
+        //   webkitBackdropFilter: `blur(8px)`
+        // }}
+        >
           <h3 className='text-[40px] font-bold leading-[1.3] mb-[20px] text-shadow text-white'>CREATIVE FRONTEND<br/><span className='text-[#ad511b]'>DESIGNER</span></h3>    
           <p className='text-lg leading-relaxed text-shadow text-white my-5 mx-0'>I'm a frontend developer based in italy, i'll help you <br/> build beautiful websites your users will love.</p>
           <div className="bmt flex mt-[50px] gap-5">
